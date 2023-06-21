@@ -1,0 +1,7 @@
+host: 192.168.28.145
+port: 8848
+nameSpace: 93e9005f-d1ec-4988-8586-332927badab0
+user: nacos
+password: nacos
+dataID: good-srv.yaml
+group: dev

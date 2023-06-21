@@ -1,0 +1,15 @@
+grpc:
+  name: good-srv
+  ip: 192.168.44.190
+  port: 50051
+
+consul:
+  ip: 192.168.28.145
+  port: 8500
+
+mysql:
+  ip: 192.168.44.190
+  port: 3306
+  dbName: shop_user_srv
+  user: root
+  password: root
