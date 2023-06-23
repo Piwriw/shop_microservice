@@ -7,10 +7,13 @@ import (
 	"google.golang.org/grpc/health"
 	"google.golang.org/grpc/health/grpc_health_v1"
 	"net"
+	"os"
+	"os/signal"
 	"shop_srvs/user_srv/global"
 	handler "shop_srvs/user_srv/handler/user"
 	"shop_srvs/user_srv/initialize"
 	"shop_srvs/user_srv/proto"
+	"syscall"
 )
 
 func main() {
@@ -47,11 +50,11 @@ func main() {
 	}()
 
 	//接收终止信号
-	//quit := make(chan os.Signal)
-	//signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
-	//<-quit
-	//if err = global.Client.Agent().ServiceDeregister("servcieid"); err != nil {
-	//	zap.S().Info("注销失败")
-	//}
-	//zap.S().Info("注销成功")
+	quit := make(chan os.Signal)
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+	<-quit
+	if err = global.Client.Agent().ServiceDeregister("servcieid"); err != nil {
+		zap.S().Info("注销失败")
+	}
+	zap.S().Info("注销成功")
 }
