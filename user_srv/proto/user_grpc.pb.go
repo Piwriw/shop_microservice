@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v3.13.0
-// source: good.proto
+// source: inventory.proto
 
 package proto
 
@@ -289,5 +289,5 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "good.proto",
+	Metadata: "inventory.proto",
 }

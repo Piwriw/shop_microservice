@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.26.0
 // 	protoc        v3.13.0
-// source: good.proto
+// source: inventory.proto
 
 package proto
 
