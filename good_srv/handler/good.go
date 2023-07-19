@@ -105,7 +105,7 @@ func (g *GoodServer) GoodsList(ctx context.Context, req *proto.GoodsFilterReques
 // BatchGetGoods 批量获取商品列表
 func (g *GoodServer) BatchGetGoods(ctx context.Context, req *proto.BatchGoodsIdInfo) (*proto.GoodsListResponse, error) {
 	var goods []model.Good
-	result := global.DB.Where(&goods, req.Id).Find(&goods)
+	result := global.DB.Where(req.Id).Find(&goods)
 
 	var goodListRes []*proto.GoodsInfoResponse
 	for _, good := range goods {
