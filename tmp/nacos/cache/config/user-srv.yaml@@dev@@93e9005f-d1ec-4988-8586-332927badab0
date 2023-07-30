@@ -1,7 +1,7 @@
 grpc:
   name: user-srv
-  ip: 192.168.44.190
-  port: 50051
+  ip: 192.168.3.93
+  port: 50054
 
 consul:
   ip: 192.168.28.145

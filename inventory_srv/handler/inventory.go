@@ -34,7 +34,7 @@ func (i *InventoryServer) InvDetail(ctx context.Context, req *proto.GoodsInvInfo
 	}
 	return &proto.GoodsInvInfo{
 		GoodsID: req.GoodsID,
-		Num:     req.Num,
+		Num:     inv.Stocks,
 	}, nil
 }
 
