@@ -1,0 +1,7 @@
+host: 192.168.28.145
+port: 8848
+nameSpace: a6514d29-868d-49a4-b0de-75592f762e2d
+user: nacos
+password: nacos
+dataID: order-srv.yaml
+group: dev
